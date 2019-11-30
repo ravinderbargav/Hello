@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arguments</title>
+</head>
+<body>
+
+</body>
+<script>
+	function printArguments()
+	{
+		document.write("Number of arguments="+arguments.length+"<br/>")
+		for(var i=0;i<arguments.length;i++)
+		{
+			document.write("Argument"+i+"="+arguments[i]+"<br/>");
+		}document.write("<br/>");
+	}
+	printArguments();
+	printArguments("A","B");
+	printArguments(10,20,30);
+	</script>
+</html>

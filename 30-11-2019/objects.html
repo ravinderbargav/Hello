@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+
+</body>
+<script>
+	/**object={
+		property: Value1;
+		property: value2;
+	} */
+	/*
+	//example of object literal
+	emp={
+		id:101,
+		name:"Ravi", 
+		salary:40000
+	};
+	document.write(emp.id);
+	document.write(emp.name+" "+emp.salary); */
+
+	//bycreating instance of an object.
+	/*var emp=new Object();
+	emp.id=102;
+	emp.salary=40000;
+	emp.name="RRR";
+	document.write(emp.id+" "+emp.name+" "+emp.salary);*/
+
+	//creation of objects
+
+	var obj={};
+	var output=" "+ typeof obj;
+	console.log(output);
+
+	//Adding properties to objects
+	var employee = {};
+	employee.name = "vinay";
+	employee.designation ="Teamlead";
+	console.log(employee);
+
+	//Retrieving properties of objects
+	var empName = employee.name;
+	output="EmpName : " +empName;
+	console.log(output);
+
+	//declaring Object Literals
+	var employee1 = {
+		name : "Ravi",
+		age : 40,
+		designation : "Manager",
+		50 : "something"
+	};
+	console.log(employee1);
+
+	//Access existing properties
+	console.log(employee1.name); // Ravi
+
+	//Access Non existing properties
+	console.log(employee1.salary); // undefined
+
+	//Usage of Dot and [] notations
+	output = employee1["name"]; // Ravi
+	console.log(output);
+
+	//use of [] notation where dot is not used for invalid identifiers
+	output = employee["50"]; // not to be used
+	console.log(output);
+
+	// use of [] notation for accessing dynamic
+	var emp = {
+		name : "abc",
+		age : 40
+	};
+	var myName = "age"; //dynamic value
+	// output = emp.myName;
+	output = emp[myName];
+	console.log(output);
+
+	// nested Objects creation
+	var student = {
+		name : "vinay",
+		age : 25,
+		group : "Bsc",
+		address : {
+			city : "Hyderabad",
+			state : "Telangana",
+			country : "India"
+		}
+	};
+
+	//Accessing them using dot notation
+	output = student.address.city;
+	console.log(output); 
+
+	//Accessing them using mix of dot and [] notation
+	output = student.address["state"];
+	console.log(output);
+
+	//Add some properties to nested object and access them
+	student.address.street = "Ameerpet";
+	output = student.address.street;
+	console.log(output);
+
+	// === operator demo for objects (if pointing to same location in memory)
+	var student1 = {
+		name : "abc",
+		age : 25
+		};
+		var student2 = {
+			name : "abc",
+			age : 25,
+		};
+		student2=student1;
+		if(student1 === student2){
+			output = "Both are Equal";
+			console.log(output);
+		}
+		else{
+			console.log("Both are Not Equal");
+		}
+	
+
+
+	</script>
+</html>
